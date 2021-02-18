@@ -25,7 +25,7 @@ else
     <section class="congratulations">
         <h1><font color=red>Congratulations!</font></h1>
         <p>Your AWS Elastic Beanstalk <em>PHP</em> application is now running on your own dedicated environment in the AWS&nbsp;Cloud</p>
-        <p><font color=yellow>DevOps Dan</font></p>
+        <p><font color=yellow>DevOps Dan!</font></p>
         <p>This environment is launched with Elastic Beanstalk PHP Platform</p>
     </section>
 
