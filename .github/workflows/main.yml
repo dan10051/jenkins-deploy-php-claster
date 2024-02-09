@@ -17,7 +17,7 @@ jobs:
       uses: easingthemes/ssh-deploy@main
       with:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        ARGS: "-v"
+        #ARGS: "-v"
         SOURCE: "*"
         REMOTE_HOST: "54.217.50.234"
         REMOTE_USER: "ubuntu"
