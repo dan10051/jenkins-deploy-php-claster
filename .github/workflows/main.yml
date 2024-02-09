@@ -28,7 +28,8 @@ jobs:
           ls -al
         SCRIPT_AFTER: |
           ls -al
-          echo $RSYNC_STDOUT        
+          #cp .env.example .env      
+          #cp redis.conf.example redis.conf
 
     - name: SSH Deploy2
       uses: easingthemes/ssh-deploy@main
