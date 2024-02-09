@@ -21,6 +21,6 @@ jobs:
         SOURCE: "*"
         REMOTE_HOST: "18.223.247.193"
         REMOTE_USER: "ubuntu"
-        TARGET: "/home/ubuntu/"
+        TARGET: "/home/ubuntu/github_enigma/"
         EXCLUDE: "/.git*"
         
