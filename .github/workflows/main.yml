@@ -24,12 +24,13 @@ jobs:
         TARGET: "/home/ubuntu/github_enigma/"
         EXCLUDE: "/.git*"
         SCRIPT_BEFORE: |
-          whoami
+          rm -rf /home/ubuntu/github_enigma/*
           ls -al
         SCRIPT_AFTER: |
-          ls -al
-          #cp .env.example .env      
-          #cp redis.conf.example redis.conf
+          rm -rf /home/ubuntu/github_enigma/local_ssh*
+          #cp github_enigma/.env.example github_enigma/.env      
+          #cp github_enigma/redis.conf.example github_enigma/redis.conf
+
 
     - name: SSH Deploy2
       uses: easingthemes/ssh-deploy@main
