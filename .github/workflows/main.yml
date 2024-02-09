@@ -8,12 +8,11 @@ jobs:
   scp-image:
     runs-on: ubuntu-latest
     steps:
-    - name: test    
-      run: echo Hello world!
-
-    - name: test2        
-      run: pwd && ls -la
-        
+    - uses: actions/checkout@v1
+    - run: |
+       pwd
+       ls -la
+          
     - name: SSH Deploy
       uses: easingthemes/ssh-deploy@main
       with:
