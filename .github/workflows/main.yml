@@ -18,8 +18,9 @@ jobs:
       with:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         #ARGS: "-rv"
-        SOURCE: " styles.css"
+        SOURCE: "*"
         REMOTE_HOST: "18.223.247.193"
         REMOTE_USER: "ubuntu"
         TARGET: "/home/ubuntu/github_enigma/"
-        EXCLUDE: "/dist/, /node_modules/"
+        EXCLUDE: "/.git*"
+        
