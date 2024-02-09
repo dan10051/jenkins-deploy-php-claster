@@ -30,7 +30,6 @@ jobs:
           ls -al
           #cp .env.example .env      
           #cp redis.conf.example redis.conf
-          cp github_enigma/cron.yaml github_enigma/1cron123.yaml
 
     - name: SSH Deploy2
       uses: easingthemes/ssh-deploy@main
