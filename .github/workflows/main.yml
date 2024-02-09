@@ -2,21 +2,28 @@ name: Create and publish a Docker image
 
 on:
   push:
-    branches: ['master']
+    branches: ['main']
 
 jobs:
   scp-image:
     runs-on: ubuntu-latest
-    
     steps:
+    - run: echo Hello world!
+    - run: pwd && ls -la
     - name: SSH Deploy
       uses: easingthemes/ssh-deploy@main
       with:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        ARGS: "-rv -i"
-        SOURCE: "./"
+        ARGS: "-rlgoDzvc -i"
+        SOURCE: "/"
         REMOTE_HOST: "18.223.247.193"
         REMOTE_USER: "ubuntu"
         TARGET: "/home/ubuntu/github_enigma/"
-
-      
+        EXCLUDE: "/dist/, /node_modules/"
+        SCRIPT_BEFORE: |
+          whoami
+          ls -al
+        SCRIPT_AFTER: |
+          whoami
+          ls -al
+          echo $RSYNC_STDOUT
