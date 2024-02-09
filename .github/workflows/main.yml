@@ -27,6 +27,7 @@ jobs:
           whoami
           ls -al
         SCRIPT_AFTER: |
-          touch 123.txt
+          touch /home/ubuntu/github_enigma/123.txt
+          cat `date` > /home/ubuntu/github_enigma/123.txt 
           ls -al
           echo $RSYNC_STDOUT        
