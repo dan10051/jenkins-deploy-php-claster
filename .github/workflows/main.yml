@@ -19,7 +19,7 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         ARGS: "-v"
         SOURCE: "*"
-        REMOTE_HOST: "18.223.247.193"
+        REMOTE_HOST: "54.217.50.234"
         REMOTE_USER: "ubuntu"
         TARGET: "/home/ubuntu/github_enigma/"
         EXCLUDE: "/.git*"
@@ -27,7 +27,29 @@ jobs:
           whoami
           ls -al
         SCRIPT_AFTER: |
-          touch /home/ubuntu/github_enigma/123.txt
-          cat `date` > /home/ubuntu/github_enigma/123.txt 
           ls -al
           echo $RSYNC_STDOUT        
+
+    - name: SSH Deploy2
+      uses: easingthemes/ssh-deploy@main
+      with:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        ARGS: "-v"
+        SOURCE: "*"
+        REMOTE_HOST: "18.203.111.109"
+        REMOTE_USER: "ubuntu"
+        TARGET: "/home/ubuntu/github_enigma/"
+        EXCLUDE: "/.git*"
+
+
+    - name: SSH Deploy3
+      uses: easingthemes/ssh-deploy@main
+      with:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        ARGS: "-v"
+        SOURCE: "*"
+        REMOTE_HOST: "52.16.188.221"
+        REMOTE_USER: "ubuntu"
+        TARGET: "/home/ubuntu/github_enigma/"
+        EXCLUDE: "/.git*"
+                   
