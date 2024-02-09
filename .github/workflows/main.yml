@@ -18,12 +18,5 @@ jobs:
         REMOTE_HOST: "18.223.247.193"
         REMOTE_USER: "ubuntu"
         TARGET: "/home/ubuntu/github_enigma/"
-#        EXCLUDE: "/dist/, /node_modules/"
-        SCRIPT_BEFORE: |
-          whoami
-          ls -al
-        SCRIPT_AFTER: |
-          whoami
-          ls -al
-          echo $RSYNC_STDOUT
+
       
